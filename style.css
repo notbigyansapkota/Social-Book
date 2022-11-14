@@ -5,15 +5,29 @@
     box-sizing: border-box;
 }
 
+:root{
+    --body-color: #efefef;
+    --nav-color: #1876f2;
+    --bg-color: #fff;
+}
+
+.dark-theme{
+    --body-color: #323639;
+    --nav-color: #323639;
+    --bg-color: #323639;
+}
+
+
 body{
-    background: #efefef;
+    background: var(--body-color);
+    transition: background 0.3s;
 }
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1876f2;
+    background: var(--nav-color);
     padding: 5px 5%;
     position: sticky;
     top: 0;
@@ -97,6 +111,8 @@ nav{
     position: sticky;
     top: 70px;
     align-self: flex-start;
+    background: var(--bg-color);
+    
 }
 
 .right-sidebar{
@@ -104,7 +120,7 @@ nav{
     position: sticky;
     top: 70px;
     align-self: flex-start;
-    background: #fff;
+    background: var(--bg-color);
     padding: 20px;
     border-radius: 4px;
     color: #626262;
@@ -121,6 +137,8 @@ nav{
     margin-bottom: 30px;
     color: #626262;
     width: fit-content;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .imp-links a img{
@@ -132,8 +150,18 @@ nav{
     color: #1876f2;
 }
 
+.imp-links a:first-child{
+    padding-top: 8px;
+}
+
 .imp-links{
     border-bottom: 1px solid #ccc;
+    padding-top: 7px;
+    padding-left: 7px;
+}
+
+.shortcut-links{
+    padding-left: 7px;
 }
 
 .shortcut-links a img{
@@ -294,7 +322,7 @@ nav{
 
 .write-post-container{
     width: 100%;
-    background: #fff;
+    background: var(--bg-color);
     border-radius: 6px;
     padding: 20px;
     columns: #626262;
@@ -357,7 +385,7 @@ nav{
 
 .post-container{
     width: 100%;
-    background: #fff;
+    background: var(--bg-color);
     border-radius: 6px;
     padding: 20px;
     color: #626262;
@@ -451,7 +479,7 @@ nav{
     position: absolute;
     width: 90%;
     max-width: 350px;
-    background: #fff;
+    background: var(--bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     overflow: hidden;
@@ -497,8 +525,35 @@ nav{
 .settings-links a{
     display: flex;
     flex: 1;
-    align-item: center;
+    align-items: center;
     justify-content: space-between;
     text-decoration: none;
     color: #626262
 }
+
+#dark-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ccc;
+    width: 45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.5s, background 0.5s;
+}
+
+#dark-btn span{
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#dark-btn.dark-btn-on{
+    padding-left: 23px;
+    background: #0a0a0a;
+}
+
