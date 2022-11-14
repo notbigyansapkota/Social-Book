@@ -110,9 +110,7 @@ nav{
     flex-basis: 25%;
     position: sticky;
     top: 70px;
-    align-self: flex-start;
-    background: var(--bg-color);
-    
+    align-self: flex-start;    
 }
 
 .right-sidebar{
@@ -130,15 +128,26 @@ nav{
     flex-basis: 47%;
 }
 
-.imp-links a, .shortcut-links a{
+.imp-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: 100%;
+    /* background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px none 5px 3px; */
+}
+
+.shortcut-links a{
     text-decoration: none;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     color: #626262;
     width: fit-content;
-    background-color: white;
-    border-radius: 5px;
 }
 
 .imp-links a img{
@@ -150,9 +159,9 @@ nav{
     color: #1876f2;
 }
 
-.imp-links a:first-child{
+/* .imp-links a:first-child{
     padding-top: 8px;
-}
+} */
 
 .imp-links{
     border-bottom: 1px solid #ccc;
@@ -161,6 +170,9 @@ nav{
 }
 
 .shortcut-links{
+    
+    border: none;
+    border-radius: 15px;
     padding-left: 7px;
 }
 
@@ -171,9 +183,11 @@ nav{
 }
 
 .shortcut-links p{
+    font-weight: bold;
+    padding-top: 8px;
     margin: 25px 0;
     color: #626262;
-    font-weight: 500;
+    padding-left: -5px;
 }
 
 .sidebar-title{
