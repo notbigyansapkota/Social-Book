@@ -9,12 +9,14 @@
     --body-color: #efefef;
     --nav-color: #1876f2;
     --bg-color: #fff;
+    --my-color: #fff;
 }
 
 .dark-theme{
-    --body-color: #323639;
-    --nav-color: #323639;
-    --bg-color: #323639;
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --bg-color: #242526;
+    --my-color: #18191A;
 }
 
 
@@ -27,7 +29,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--nav-color);
+    background: #1876f2;
     padding: 5px 5%;
     position: sticky;
     top: 0;
@@ -214,6 +216,7 @@ nav{
     margin-bottom: 20px;
 }
 .left-event{
+    background-color: var(--my-color);
     border-radius: 10px;
     height: 65px;
     width: 65px;
